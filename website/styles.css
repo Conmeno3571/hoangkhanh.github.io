@@ -1,0 +1,483 @@
+/* =========================
+   RESET & CƠ BẢN
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* =========================
+   BANNER
+========================= */
+.banner {
+    background: linear-gradient(135deg, #0f4c81, #1e88e5);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   TIÊU ĐỀ
+========================= */
+.title {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 26px;
+    color: #0f4c81;
+    font-weight: 600;
+}
+
+/* =========================
+   SLOGAN
+========================= */
+.slogan {
+    background-color: #eaf2fb;
+    padding: 40px 20px;
+}
+
+.row {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.block_3 {
+    flex: 1;
+    min-width: 250px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.block_3:hover {
+    transform: translateY(-5px);
+}
+
+.block_3 h3 {
+    color: #1e88e5;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.block_3 p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* =========================
+   NỘI DUNG CHÍNH
+========================= */
+.content {
+    max-width: 1100px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   TABLE CLB
+========================= */
+table {
+    width: 100%;
+    border-spacing: 30px;
+}
+
+td {
+    vertical-align: middle;
+}
+
+/* =========================
+   HÌNH ẢNH
+========================= */
+.content img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   TIÊU ĐỀ CLB
+========================= */
+.content h3 {
+    color: #0f4c81;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   ĐOẠN VĂN
+========================= */
+.content p {
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #444;
+}
+
+/* =========================
+   LINK
+========================= */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover h3 {
+    color: #1e88e5;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background-color: #0f4c81;
+    color: #ffffff;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer .block_3 {
+    background: transparent;
+    box-shadow: none;
+}
+
+.footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffeb3b;
+}
+
+.footer p {
+    font-size: 15px;
+    color: #e0e0e0;
+}
+
+/* =========================
+   RESPONSIVE (ĐIỆN THOẠI)
+========================= */
+@media (max-width: 768px) {
+    table {
+        border-spacing: 15px;
+    }
+
+    .banner h1 {
+        font-size: 24px;
+    }
+
+    .title h2 {
+        font-size: 20px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
+
+/* =========================
+   NÚT QUAY VỀ TRANG CHỦ
+========================= */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #1e88e5, #0f4c81);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    transition: all 0.35s ease;
+}
+
+/* Hover: nổi lên */
+.btn:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #2196f3, #1565c0);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   CARD CHỮ – BO GÓC + ĐỔ BÓNG
+========================= */
+
+/* Chỉ áp dụng cho ô CHỨA CHỮ */
+.content table td {
+    border-radius: 16px;
+    transition: all 0.35s ease;
+}
+
+/* Ô chữ (bên có h3 + p) */
+.content table td:has(h3) {
+    background: #ffffff;
+    padding: 30px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Hover: nổi lên + bóng sâu hơn */
+.content table tr:hover td:has(h3) {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+/* Tiêu đề */
+.content table td h3 {
+    transition: color 0.3s ease;
+}
+
+/* Hover tiêu đề */
+.content table tr:hover h3 {
+    color: #0d47a1;
+}
+
+/* =========================
+   TRANG CHI TIẾT CLB (BÓNG RỔ)
+========================= */
+
+/* Khối bao nội dung */
+.club-detail {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transition: all 0.35s ease;
+}
+
+/* Hover toàn khối → nổi lên */
+.club-detail:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 50px rgba(0,0,0,0.22);
+}
+
+/* Ảnh CLB */
+.club-detail img {
+    width: 45%;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+}
+
+/* Phần chữ */
+.club-text {
+    width: 55%;
+    background: #f9fbfd;
+    padding: 30px;
+    border-radius: 18px;
+    transition: all 0.35s ease;
+}
+
+/* Hover riêng phần chữ */
+.club-detail:hover .club-text {
+    box-shadow: inset 0 0 0 2px rgba(30,136,229,0.15);
+}
+
+/* Tiêu đề trong trang */
+.club-text h2 {
+    color: #0d47a1;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Đoạn văn */
+.club-text p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Danh sách */
+.club-text ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.club-text li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #444;
+}
+
+/* =========================
+   RESPONSIVE (ĐIỆN THOẠI)
+========================= */
+@media (max-width: 900px) {
+    .club-detail {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .club-detail img,
+    .club-text {
+        width: 100%;
+    }
+}
+
+.footer-links {
+    list-style: none;   /* BỎ DẤU CHẤM */
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes blinkColor {
+    0%   { color: #ffffff; }
+    25%  { color: #ffcc00; }
+    50%  { color: #00e5ff; }
+    75%  { color: #ff5722; }
+    100% { color: #ffffff; }
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    animation: blinkColor 0.8s linear infinite;
+    font-weight: bold;
+}
+
+.club-image {
+    max-width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+
+.club-image-link:hover .club-image {
+    animation: blinkShadow 1s infinite;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* đổ bóng */
+}
+
+@keyframes blinkShadow {
+    0%, 100% { filter: brightness(100%); }
+    50% { filter: brightness(150%); } /* nháy sáng */
+}
+
+.banner{
+    background-image: url('Images/truong.jpg'); /* Đường dẫn ảnh bạn upload */
+    background-repeat: no-repeat;     /* Không lặp lại ảnh */
+    background-size: cover;           /* Kéo dài ảnh phủ toàn bộ vùng */
+    background-position: center;      /* Canh giữa ảnh */
+    color: yellow;                    /* Màu chữ dễ nhìn trên ảnh */
+}
+
+/* Content căn giữa */
+.content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Khung chính */
+.club-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== KHUNG ẢNH ===== */
+.image-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* Mỗi ảnh là 1 card */
+.image-item {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+/* Ảnh */
+.image-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Hover ảnh */
+.image-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.image-item:hover img {
+    transform: scale(1.1);
+}
+
+/* ===== KHUNG NỘI DUNG ===== */
+.club-info {
+    background: #f9fbff;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.club-info h2 {
+    color: #0b4dbb;
+    margin-bottom: 15px;
+}
+
+.club-info p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.club-info ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.club-info ul li {
+    margin-bottom: 10px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: linear-gradient(135deg, #1e90ff, #005bea);
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 91, 234, 0.4);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 91, 234, 0.6);
+}
